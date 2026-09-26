@@ -1,0 +1,25 @@
+{
+  "name": "@saas/backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "start": "bun src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^1.2.0",
+    "@elysiajs/swagger": "^1.2.0",
+    "@saas/database": "workspace:*",
+    "@saas/security": "workspace:*",
+    "@saas/types": "workspace:*",
+    "@saas/validation": "workspace:*",
+    "elysia": "^1.2.14"
+  },
+  "devDependencies": {
+    "@saas/config-typescript": "workspace:*",
+    "@types/bun": "latest",
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3"
+  }
+}

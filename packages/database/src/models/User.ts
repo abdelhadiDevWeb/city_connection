@@ -36,7 +36,6 @@ const UserSchema = new Schema<IUserDocument>(
     isSuperAdmin: {
       type: Boolean,
       default: false,
-      index: true,
     },
     isEmailVerified: {
       type: Boolean,

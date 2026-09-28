@@ -4,6 +4,7 @@
   "private": true,
   "main": "expo-router/entry",
   "scripts": {
+    "dev": "expo start",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -17,7 +18,7 @@
     "@saas/types": "workspace:*",
     "@saas/validation": "workspace:*",
     "expo": "~52.0.35",
-    "expo-asset": "^57.0.18",
+    "expo-asset": "~11.0.5",
     "expo-constants": "~17.0.7",
     "expo-linking": "~7.0.5",
     "expo-router": "~4.0.17",
@@ -25,7 +26,7 @@
     "query-string": "^9.5.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-native": "0.76.7",
+    "react-native": "0.76.9",
     "react-native-safe-area-context": "4.12.0",
     "react-native-screens": "~4.4.0",
     "react-native-web": "~0.19.13"

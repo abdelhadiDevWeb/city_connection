@@ -1,34 +1,22 @@
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import { AuthProvider } from '../context/AuthContext';
 
 export default function RootLayout() {
   return (
-    <>
-      <StatusBar style="light" />
+    <AuthProvider>
+      <StatusBar style="dark" />
       <Stack
         screenOptions={{
-          headerStyle: { backgroundColor: '#090d16' },
-          headerTintColor: '#f8fafc',
-          headerTitleStyle: { fontWeight: 'bold' },
-          contentStyle: { backgroundColor: '#090d16' },
+          headerShown: false,
+          contentStyle: { backgroundColor: '#ffffff' },
         }}
       >
-        <Stack.Screen
-          name="index"
-          options={{
-            title: 'Apex Cloud Mobile',
-            headerShadowVisible: false,
-          }}
-        />
-        <Stack.Screen
-          name="login"
-          options={{
-            title: 'Sign In',
-            presentation: 'modal',
-          }}
-        />
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="(auth)/login" options={{ headerShown: false }} />
       </Stack>
-    </>
+    </AuthProvider>
   );
 }

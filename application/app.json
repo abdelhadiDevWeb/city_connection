@@ -1,31 +1,36 @@
 {
   "expo": {
-    "name": "Apex Mobile",
-    "slug": "apex-saas-mobile",
+    "name": "Cité Connect Résidents",
+    "slug": "cite-connect-resident",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "scheme": "apexapp",
+    "scheme": "citeconnect",
     "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "splash": {
-      "backgroundColor": "#0b0f19"
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#09090b"
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.apex.saas.app"
+      "bundleIdentifier": "com.citeconnect.resident"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#0b0f19"
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#09090b"
       },
-      "package": "com.apex.saas.app"
+      "package": "com.citeconnect.resident"
     },
     "web": {
+      "favicon": "./assets/favicon.png",
       "bundler": "metro"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-asset"
     ]
   }
 }

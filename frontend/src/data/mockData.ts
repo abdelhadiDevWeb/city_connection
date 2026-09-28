@@ -488,3 +488,43 @@ export const mockDocuments = [
     date: '10 Déc 2025',
   },
 ];
+
+export const mockBuildingManagers = [
+  {
+    id: 'bm-1',
+    fullName: 'Mourad Taguine',
+    email: 'mourad.taguine@citeconnect.dz',
+    phone: '0555 11 22 33',
+    assignedBuildingId: 'b-1',
+    assignedBuildingName: 'Bâtiment A1',
+    managedApartmentsCount: 36,
+    managedResidentsCount: 35,
+    assignedAt: 'Janvier 2025',
+    status: 'ACTIVE',
+  },
+  {
+    id: 'bm-2',
+    fullName: 'Rachid Mebarki',
+    email: 'rachid.mebarki@citeconnect.dz',
+    phone: '0662 88 99 00',
+    assignedBuildingId: 'b-2',
+    assignedBuildingName: 'Bâtiment A2',
+    managedApartmentsCount: 36,
+    managedResidentsCount: 36,
+    assignedAt: 'Mars 2025',
+    status: 'ACTIVE',
+  },
+  {
+    id: 'bm-3',
+    fullName: 'Abdelkader Zenati',
+    email: 'a.zenati@citeconnect.dz',
+    phone: '0770 44 55 66',
+    assignedBuildingId: 'b-3',
+    assignedBuildingName: 'Bâtiment B1',
+    managedApartmentsCount: 36,
+    managedResidentsCount: 34,
+    assignedAt: 'Juin 2025',
+    status: 'ACTIVE',
+  },
+];
+

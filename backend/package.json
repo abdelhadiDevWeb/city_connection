@@ -8,14 +8,14 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@elysiajs/cors": "^1.2.0",
-    "@elysiajs/swagger": "^1.2.0",
+    "@elysiajs/cors": "^1.4.2",
+    "@elysiajs/swagger": "^1.3.1",
     "@saas/database": "workspace:*",
     "@saas/security": "workspace:*",
     "@saas/types": "workspace:*",
     "@saas/validation": "workspace:*",
     "@sinclair/typebox": "^0.34.52",
-    "elysia": "^1.2.14"
+    "elysia": "^1.4.30"
   },
   "devDependencies": {
     "@saas/config-typescript": "workspace:*",

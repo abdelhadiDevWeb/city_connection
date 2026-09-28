@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Apex SaaS Platform | Modern Cloud Workspace',
-  description: 'Intelligent multi-tenant cloud operations platform',
+  title: 'Cité Connect | Gestion Immobilière & Copropriétés',
+  description: 'Plateforme moderne et professionnelle de gestion des résidences, charges communes, pannes et copropriétaires.',
 };
 
 export default function RootLayout({
@@ -12,8 +12,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className="min-h-screen bg-[#0b0f19] text-slate-100 antialiased selection:bg-blue-600 selection:text-white">
+    <html lang="fr">
+      <body className="min-h-screen bg-[#faf9f6] text-zinc-900 antialiased selection:bg-zinc-950 selection:text-white">
         {children}
       </body>
     </html>

@@ -24,42 +24,42 @@ export default function SuperAdminDashboard() {
   const mockTenants = [
     {
       id: 'org_1',
-      name: 'Acme Global Corp',
-      slug: 'acme-global',
+      name: 'Syndic Al-Amel Alger',
+      slug: 'syndic-al-amel',
       plan: 'ENTERPRISE',
-      usersCount: 248,
+      usersCount: 840, // 840 apartments across 3 sites
       status: 'ACTIVE',
-      mrr: '$1,299',
+      mrr: '120,000 DZD',
       createdAt: '2026-01-14',
     },
     {
       id: 'org_2',
-      name: 'CyberShield Systems',
-      slug: 'cybershield',
+      name: 'Cabinet Immobilier Bahia Oran',
+      slug: 'cabinet-bahia',
       plan: 'PRO',
-      usersCount: 42,
+      usersCount: 320,
       status: 'ACTIVE',
-      mrr: '$499',
+      mrr: '65,000 DZD',
       createdAt: '2026-02-03',
     },
     {
       id: 'org_3',
-      name: 'Nexus Quantum Tech',
-      slug: 'nexus-quantum',
+      name: 'Association Copropriétaires Les Pins',
+      slug: 'residence-les-pins',
       plan: 'STARTER',
-      usersCount: 8,
+      usersCount: 64,
       status: 'ACTIVE',
-      mrr: '$99',
+      mrr: '25,000 DZD',
       createdAt: '2026-02-18',
     },
     {
       id: 'org_4',
-      name: 'Solaris Cloud Labs',
-      slug: 'solaris-labs',
+      name: 'Syndic Cité 1200 Logements Constantine',
+      slug: 'syndic-1200-cst',
       plan: 'FREE',
-      usersCount: 3,
+      usersCount: 1200,
       status: 'PENDING_REVIEW',
-      mrr: '$0',
+      mrr: '0 DZD',
       createdAt: '2026-03-01',
     },
   ];
@@ -115,8 +115,8 @@ export default function SuperAdminDashboard() {
               <ShieldAlert className="h-5 w-5 text-white" />
             </div>
             <div>
-              <h1 className="text-sm font-bold tracking-wider text-slate-100 uppercase">SUPER ADMIN</h1>
-              <span className="text-xs text-indigo-400 font-mono">ROOT REALM v1.0</span>
+              <h1 className="text-sm font-bold tracking-wider text-slate-100 uppercase">CITÉ CONNECT</h1>
+              <span className="text-xs text-indigo-400 font-mono">SUPER ADMIN REALM</span>
             </div>
           </div>
 

@@ -8,6 +8,16 @@ import { superAdminRoutes } from './routes/super-admin';
 import { tenantAdminRoutes } from './routes/admin';
 import { appRoutes } from './routes/app';
 
+// Cité Connect Residence Management Routes
+import { residenceRoutes } from './routes/residences';
+import { financeRoutes } from './routes/finances';
+import { maintenanceRoutes } from './routes/maintenance';
+import { staffRoutes } from './routes/staff';
+import { announcementRoutes } from './routes/announcements';
+import { dashboardRoutes } from './routes/dashboard';
+import { lookupRoutes } from './routes/lookups';
+import { residentRoutes } from './routes/resident';
+
 const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 4000;
 
 // Initialize Database connection
@@ -21,7 +31,10 @@ export const app = new Elysia()
   // Global Error Handler
   .onError(({ code, error, set }) => {
     console.error(`[API Error] [${code}]:`, error);
-    const errorMessage = error && typeof error === 'object' && 'message' in error ? String((error as { message: unknown }).message) : String(error);
+    const errorMessage =
+      error && typeof error === 'object' && 'message' in error
+        ? String((error as { message: unknown }).message)
+        : String(error);
 
     if (errorMessage === 'UNAUTHORIZED') {
       set.status = 401;
@@ -60,9 +73,10 @@ export const app = new Elysia()
       path: '/docs',
       documentation: {
         info: {
-          title: 'SaaS Platform Enterprise Core API',
+          title: 'Cité Connect — Residence Management Enterprise API',
           version: '1.0.0',
-          description: 'High-throughput Bun API servicing Super Admin, Multi-Tenant Frontend, and Expo Mobile App',
+          description:
+            'High-throughput Bun API for AADL, LPA, LPP, and Private Residence Operations across Web and Mobile',
         },
       },
     })
@@ -70,18 +84,28 @@ export const app = new Elysia()
   // Health Check
   .get('/health', () => ({
     status: 'ok',
+    platform: 'Cité Connect',
     runtime: 'Bun',
     uptime: process.uptime(),
     timestamp: new Date().toISOString(),
   }))
-  // API Routes
+  // Core Auth & SaaS Routes
   .use(authRoutes)
   .use(superAdminRoutes)
   .use(tenantAdminRoutes)
   .use(appRoutes)
+  // Cité Connect Domain Routes
+  .use(residenceRoutes)
+  .use(financeRoutes)
+  .use(maintenanceRoutes)
+  .use(staffRoutes)
+  .use(announcementRoutes)
+  .use(dashboardRoutes)
+  .use(lookupRoutes)
+  .use(residentRoutes)
   .listen(PORT);
 
-console.log(`🚀 SaaS Backend running at http://localhost:${PORT}`);
+console.log(`🚀 Cité Connect Backend running at http://localhost:${PORT}`);
 console.log(`📑 OpenAPI Documentation available at http://localhost:${PORT}/docs`);
 
 export type App = typeof app;

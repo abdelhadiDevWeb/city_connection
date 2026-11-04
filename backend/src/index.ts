@@ -1,4 +1,5 @@
 import { Elysia } from 'elysia';
+import { node } from '@elysiajs/node';
 import { cors } from '@elysiajs/cors';
 import { swagger } from '@elysiajs/swagger';
 import { connectToDatabase } from '@saas/database';
@@ -17,7 +18,9 @@ try {
   console.warn('[MongoDB] Running without persistent DB or connecting in background:', error);
 }
 
-export const app = new Elysia()
+export const app = new Elysia({
+  adapter: node(),
+})
   // Global Error Handler
   .onError(({ code, error, set }) => {
     console.error(`[API Error] [${code}]:`, error);

@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "bun --watch src/index.ts",
-    "start": "bun src/index.ts",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc -p tsconfig.json",
+    "start:prod": "node dist/index.js",
+   
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@elysiajs/cors": "^1.2.0",
+    "@elysiajs/node": "^1.4.5",
     "@elysiajs/swagger": "^1.2.0",
     "@saas/database": "workspace:*",
     "@saas/security": "workspace:*",
